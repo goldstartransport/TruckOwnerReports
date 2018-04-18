@@ -18,6 +18,8 @@ function main(){
 	// Change Driver's Name
 	//$(driverNameId).keyup(myTrip.setCoDriverName);
 	//$(driverNameId).blur(myTrip.setCoDriverName);
+
+	// Configuring GitHub
 	
 	
 	// Int Prevent Bind
