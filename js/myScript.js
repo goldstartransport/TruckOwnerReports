@@ -39,7 +39,7 @@ class Trip {
 		this.startMiles = 0;
 		this.finishMiles = 0;
 	}
-	// Getters
+	
 	get totalMiles(){
 		return this.calcTotalMiles();
 	}
