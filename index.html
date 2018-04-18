@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Truck Owner's Reports</title>
+	
+	<link rel="stylesheet" href="css/myStyle.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/myScript.js"></script>
+</head>
+<body>
+	
+	<div class="container border border-dark rounded">
+		<div class="row">
+			<div class="col-sm-12 col-md-3">
+				<img src="images/logo.jpg">
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<h2 class="mainHeader">Truck Owner's Reports</h2><a class="btn btn-primary" id="myTest">Test</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="drversNames col-md-6">
+				<div class="row">
+					<div class="col-sm-4">
+						<label for="driverName">Driver&nbsp;name:</label>
+					</div>
+					<div class="col-sm-8">
+						<input id="driverName" name="driverName" class="form-control hi">
+					</div>
+					<div class="col-sm-4">
+						<label for="coDriverName">Co&nbsp;Driver&nbsp;name:</label>
+					</div>
+					<div class="spacerTop col-sm-8">
+						<input id="coDriverName" name="coDriverName" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="checksInfo col-md-6">
+				<div class="row">
+					<div class="col-sm-2">
+						<label label="truckNum">Truck&nbsp;#</label>
+					</div>
+					<div class="col-sm-4">
+						<input id="truckNum" name="truckNum" class="form-control">
+					</div>
+					<div class="col-sm-2">
+						<label for="trailerNum">Trailer&nbsp;#</label>
+					</div>
+					<div class="col-sm-4">
+						<input id="trailerNum" name="trailerNum" class="form-control">
+					</div>
+					<div class="col-sm-2">
+						<label for="checkNum">Checks&nbsp;#</label>
+					</div>
+					<div class="spacerTop col-sm-4">
+						<input id="checkNum" name="checkNum" class="form-control">
+					</div>
+					<div class="col-sm-2">
+						<label for="totalLoadCost">Total&nbsp;Load Cost</label>
+					</div>
+					<div class="spacerTop col-sm-4">
+						<input id="totalLoadCost" name="totalLoadCost" class="form-control" readonly="readonly">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row border-top border-dark rounded">
+			<div class="col-sm-4 col-md-2">
+				<label for="startMiles">Start&nbsp;miles</label>
+				<input id="startMiles" name="startMiles" class="form-control int">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="finishMiles">Finish&nbsp;Miles</label>
+				<input id="finishMiles" name="finishMiles" class="form-control int">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="totalMiles">Total&nbsp;Miles</label>
+				<input id="totalMiles" name="totalMiles" class="form-control" readonly="readonly">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="avgPerMile">Avg&nbsp;per&nbsp;Mile</label>
+				<input id="avgPerMile" name="avgPerMile" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="extraPickUps">Extra&nbsp;Pickups</label>
+				<input id="extraPickUps" name="extraPickUps" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="otherPay">Other&nbsp;Pay</label>
+				<input id="otherPay" name="otherPay" class="form-control">
+			</div>
+		</div>
+		<div class="row border-top border-dark rounded">
+			<div class="col-sm-4 col-md-2">
+				<label for="avgPerGalon">Avg&nbsp;per&nbsp;Galon</label>
+				<input id="avgPerGalon" name="avgPerGalon" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="payPerMile">Pay&nbsp;per&nbsp;Mile</label>
+				<input id="payPerMile" name="payPerMile" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="extraPickUpPay">Extra&nbsp;PickUp&nbsp;$</label>
+				<input id="extraPickUpPay" name="extraPickUpPay" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="pickUpsPayTotal">PickUps&nbsp;Total&nbsp;$</label>
+				<input id="pickUpsPayTotal" name="pickUpsPayTotal" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="driversTotal">Driver's&nbsp;Total</label>
+				<input id="driversTotal" name="driversTotal" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="otherCharge">Other&nbsp;Charge</label>
+				<input id="otherCharge" name="otherCharge" class="form-control">
+			</div>
+		</div>
+		<div class="row border-top border-dark rounded">
+			<div class="col-sm-4 col-md-2">
+				<label for="tripId">Trip&nbsp;id</label>
+				<input id="tripId" name="tripId" class="form-control">
+			</div>
+			<div class="col-sm-8 col-md-4">
+				<label for="loadCost">Load&nbsp;cost</label>
+				<input id="loadCost" name="loadCost" class="form-control">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<label for="startDate">Start&nbsp;date</label>
+				<input id="startDate" name="startDate" class="form-control">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<label for="arrivalDate">Arrival&nbsp;date</label>
+				<input id="arrivalDate" name="arrivaltDate" class="form-control">
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<label for="from">From</label>
+				<input id="from" name="from" class="form-control">
+			</div>
+			<div class="col-sm-10 col-md-5">
+				<label for="to">To</label>
+				<input id="to" name="to" class="form-control">
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<label>&nbsp;</label>
+				<a class="btn btn-primary">More</a>
+			</div>
+		</div>
+		<div class="row border-top border-dark rounded">
+			<div class="col-sm-4 col-md-2">
+				<label for="state">State</label>
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="odometer">Odometer</label>
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="stateMiles">State Miles</label>
+			</div>
+			<div class="col-sm-10 col-md-5">
+				<label for="hwyUsed">Hwys Used</label>
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<label>&nbsp;</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 col-md-2">
+				<input id="state" name="state" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<input id="odometer" name="odometer" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<input id="stateMiles" name="stateMiles" class="form-control">
+			</div>
+			<div class="col-sm-10 col-md-5">
+				<input id="hwyusedsed" name="hwyused" class="form-control">
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<a class="btn btn-primary">More</a>
+			</div>
+		</div>
+		<div class="row border-top border-dark rounded">
+			<div class="col-sm-4 col-md-2">
+				<label for="date">Date</label>
+				<input id="date" name="date" class="form-control">
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<label for="city">City</label>
+				<input id="city" name="city" class="form-control">
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<label for="state">State</label>
+				<input id="state" name="state" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="quantity">Quantity</label>
+				<input id="quantity" name="quantity" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="perGalonPrice">Per&nbsp;Galon&nbsp;$</label>
+				<input id="perGalonPrice" name="perGalonPrice" class="form-control">
+			</div>
+			<div class="col-sm-4 col-md-2">
+				<label for="gasTotalPrice">Gas&nbsp;Total&nbsp;$</label>
+				<input id="gasTotalPrice" name="gasTotalPrice" class="form-control">
+			</div>
+		</div>
+		<div class="row">
+			<div class="offset-sm-1 col-sm-2 col-md-1">
+				<input type="checkbox"class="form-check-input">
+				<label for="def">DEF</label>
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<input type="checkbox"class="form-check-input">
+				<label for="reefer">Reefer</label>
+			</div>
+			<div class="col-sm-2 col-md-1">
+				<a class="btn btn-primary">More</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="myBox">
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="state">State</label>
+						</div>
+						<div class="col-sm-4">
+							<label for="gasTotal">Gas&nbsp;total</label>
+						</div>
+						<div class="col-sm-4">
+							<label for="milesTotal">Miles&nbsp;total</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<input id="state" name="state" class="form-control">
+						</div>
+						<div class="col-sm-4">
+							<input id="gasTotal" name="gasTotal" class="form-control">
+						</div>
+						<div class="col-sm-4">
+							<input id="milesTotal" name="milesTotal" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="myBox">
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="fuelCost">Fuel Cost:</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="fuelCost" name="fuelCost" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="tolls">Tolls</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="scales" name="Scales" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="truckwash">Truck Wash</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="truckwash" name="truckwash" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="lumper">Lumper</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="lumper" name="lumper" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="repair">Repair</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="repair" name="repair" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="parts">Parts</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="parts" name="parts" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="oilchange">Oil Change</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="oilchange" name="oilchange" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="other">Other</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="other" name="other" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="tires">Tires</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="tires" name="tires" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="tripack">TripPak</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="tripack" name="tripack" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<label for="totals">Totals</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" id="totals" name="totals" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+	font-size: 1.2em;
+}
+
+input {
+	font-family: "Courier New", Courier, monospace !important;
+	font-weight: 600;
+}
+
+.row {
+	padding: 5px;
+}
+
+.myBox {
+	border: 1px solid black;
+}
+
+.mainHeader {
+	text-align: center;
+}
+
+.spacerTop {
+	margin-top: 4px;
+}
+
+.form-control {
+	border: 1.5px solid black !important;
+}
