@@ -10,6 +10,21 @@ var startMilesId = "#startMiles";
 var finishMilesId = "#finishMiles";
 var totalMilesId = "#totalMiles";
 
+// Trip Class
+class Trip {
+	constructor(){
+		this.driverName = "";
+		this.startMiles = 0;
+		this.finishMiles = 0;
+	}
+	
+	get totalMiles(){
+		return this.calcTotalMiles();
+	}
+	calcTotalMiles(){
+		return this.finishMiles - this.startMiles;
+	}
+}
 
 // Main Declaration
 function main(){
@@ -33,22 +48,6 @@ function main(){
 	$("#myTest").click(function(){
 		alert(myTrip.totalMiles);
 	});
-}
-
-class Trip {
-	constructor(){
-		this.driverName = "";
-		this.startMiles = 0;
-		this.finishMiles = 0;
-	}
-	
-	get totalMiles(){
-		return this.calcTotalMiles();
-	}
-	calcTotalMiles(){
-		return this.finishMiles - this.startMiles;
-	}
-	
 }
 
 function normPosInt(num){
