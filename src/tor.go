@@ -15,9 +15,9 @@ type Page struct {
 var templates = template.Must(template.ParseFiles("trip.html"))
 
 func main() {
-	http.HandleFunc("/reports/", tripHandler)
+	http.HandleFunc("/trip.html", tripHandler)
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
